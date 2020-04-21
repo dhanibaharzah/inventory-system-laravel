@@ -91,7 +91,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="form-group">
+                                            <!--<div class="form-group">
                                                 <label for="exampleInputFile">Product Image</label>
                                                 <div class="input-group">
                                                     <div class="custom-file">
@@ -99,6 +99,10 @@
                                                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                                     </div>
                                                 </div>
+                                            </div>-->
+                                            <div class="form-group">
+                                                <label for="">Upload Image</label>
+                                                <input type="file" name="image" class="form-control" >
                                             </div>
                                             <div class="form-group">
                                                 <label>Buying Date</label>

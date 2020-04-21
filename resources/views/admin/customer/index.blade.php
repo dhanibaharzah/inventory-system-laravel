@@ -71,7 +71,7 @@
                                             <td>{{ $key + 1 }}</td>
                                             <td>{{ $customer->name }}</td>
                                             <td>
-                                                <img class="img-rounded" style="height:35px; width: 35px;" src="{{ URL::asset('customer/'.$customer->photo) }}" alt="{{ $customer->name }}">
+                                                <img class="img-rounded" style="height:35px; width: 35px;" src="{{ URL::asset('product/'.$customer->photo) }}" alt="{{ $customer->name }}">
                                             </td>
                                             <td>{{ $customer->email }}</td>
                                             <td>0{{ $customer->phone }}</td>

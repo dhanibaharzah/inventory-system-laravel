@@ -49,7 +49,7 @@
                                             <div class="form-group">
                                                 <label for="exampleInputFile">Image</label>
                                                 <p>
-                                                    <img width="50" height="50" src="{{ URL::asset("storage/product/".$product->image) }}" alt="{{ $product->name }}">
+                                                    <img width="50" height="50" src="{{ URL::asset('product/'.$product->image) }}" alt="{{ $product->name }}">
                                                 </p>
                                             </div>
                                             <div class="form-group">

@@ -73,15 +73,16 @@ class ProductController extends Controller
         {
             $currentDate = Carbon::now()->toDateString();
             $imageName = $slug.'-'.$currentDate.'-'.uniqid().'.'.$image->getClientOriginalExtension();
-            if (!Storage::disk('public')->exists('product'))
-            {
-                Storage::disk('public')->makeDirectory('product');
-            }
-            $postImage = Image::make($image)->resize(480, 320)->stream();
-            Storage::disk('public')->put('product/'.$imageName, $postImage);
+            $image->move(public_path('product'), $imageName);
+            // if (!Storage::disk('public')->exists('product'))
+            // {
+            //     Storage::disk('public')->makeDirectory('product');
+            // }
+            // $postImage = Image::make($image)->resize(480, 320)->stream();
+            // Storage::disk('public')->put('product/'.$imageName, $postImage);
         } else
         {
-            $imageName = 'default.png';
+            $imageName = $slug.'-'.$currentDate.'-'.uniqid().'.'.$image->getClientOriginalExtension();
         }
 
         $product = new Product();
@@ -162,19 +163,20 @@ class ProductController extends Controller
         {
             $currentDate = Carbon::now()->toDateString();
             $imageName = $slug.'-'.$currentDate.'-'.uniqid().'.'.$image->getClientOriginalExtension();
-            if (!Storage::disk('public')->exists('product'))
-            {
-                Storage::disk('public')->makeDirectory('product');
-            }
+            $image->move(public_path('product'), $imageName);
+            // if (!Storage::disk('public')->exists('product'))
+            // {
+            //     Storage::disk('public')->makeDirectory('product');
+            // }
 
-            // delete old photo
-            if (Storage::disk('public')->exists('product/'. $product->image))
-            {
-                Storage::disk('public')->delete('product/'. $product->image);
-            }
+            // // delete old photo
+            // if (Storage::disk('public')->exists('product/'. $product->image))
+            // {
+            //     Storage::disk('public')->delete('product/'. $product->image);
+            // }
 
-            $postImage = Image::make($image)->resize(480, 320)->stream();
-            Storage::disk('public')->put('product/'.$imageName, $postImage);
+            // $postImage = Image::make($image)->resize(480, 320)->stream();
+            // Storage::disk('public')->put('product/'.$imageName, $postImage);
         } else
         {
             $imageName = $product->image;

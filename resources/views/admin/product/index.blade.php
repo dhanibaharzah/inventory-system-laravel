@@ -79,7 +79,7 @@
                                             <td>{{ $key + 1 }}</td>
                                             <td>{{ $product->name }}</td>
                                             <td>
-                                                <img class="img-rounded" style="height:35px; width: 35px;" src="{{ URL::asset("storage/product/".$product->image) }}" alt="{{ $product->name }}">
+                                                <img class="img-rounded" style="height:35px; width: 35px;" src="{{ URL::asset('product/'.$product->image) }}" alt="{{ $product->name }}">
                                             </td>
                                             <td>{{ $product->category->name }}</td>
                                             <td>{{ $product->supplier->name }}</td>

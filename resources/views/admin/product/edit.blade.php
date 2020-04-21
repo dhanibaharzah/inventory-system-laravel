@@ -92,7 +92,7 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="form-group">
+                                            <!--<div class="form-group">
                                                 <label for="exampleInputFile">Product Image</label>
                                                 <div class="input-group">
                                                     <div class="custom-file">
@@ -100,7 +100,12 @@
                                                         <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                                     </div>
                                                 </div>
-                                                <img class="mt-2" width="50" height="40" src="{{ URL::asset('storage/product/'. $product->image) }}" alt="{{ $product->name }}">
+                                                <img class="mt-2" width="50" height="40" src="{{ URL::asset('product/'. $product->image) }}" alt="{{ $product->name }}">
+                                            </div>-->
+                                            <div class="form-group">
+                                                <label for="">Upload Image</label>
+                                                <input type="file" name="image" class="form-control" >
+                                                <img class="mt-2" width="50" height="40" src="{{ URL::asset('product/'. $product->image) }}" alt="{{ $product->name }}">
                                             </div>
                                             <div class="form-group">
                                                 <label>Buying Date</label>
